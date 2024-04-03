@@ -1,0 +1,13 @@
+/* Webfont: Stara-BoldItalic */
+
+@font-face {
+    font-family: 'StaraBoldItalic';
+    src: url('../../fonts/Stara-BoldItalic.woff') format('woff'), /* Modern Browsers */
+         url('../../fonts/Stara-BoldItalic.woff2') format('woff2'), /* Modern Browsers */
+         url('../../fonts/Stara-BoldItalic.ttf') format('truetype'); /* Safari, Android, iOS */
+         
+    font-style: italic;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+

@@ -1,0 +1,13 @@
+/* Webfont: Stara-BlackItalic */
+
+@font-face {
+    font-family: 'StaraBlackItalic';
+    src: url('../../fonts/Stara-BlackItalic.woff') format('woff'), /* Modern Browsers */
+        url('../../fonts/Stara-BlackItalic.woff2') format('woff2'), /* Modern Browsers */
+        url('../../fonts/Stara-BlackItalic.ttf') format('truetype'); /* Safari, Android, iOS */
+         
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

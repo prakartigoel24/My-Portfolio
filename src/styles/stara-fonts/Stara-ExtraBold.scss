@@ -1,0 +1,13 @@
+/* Webfont: Stara-ExtraBold */
+
+@font-face {
+    font-family: 'StaraExtraBold';
+    src: url('../../fonts/Stara-ExtraBold.woff') format('woff'), /* Modern Browsers */
+         url('../../fonts/Stara-ExtraBold.woff2') format('woff2'), /* Modern Browsers */
+         url('../../fonts/Stara-ExtraBold.ttf') format('truetype'); /* Safari, Android, iOS */
+         
+    font-style: normal;
+    font-weight: bolder;
+    text-rendering: optimizeLegibility;
+}
+

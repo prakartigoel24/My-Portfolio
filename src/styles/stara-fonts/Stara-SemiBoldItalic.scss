@@ -1,0 +1,13 @@
+/* Webfont: Stara-SemiBoldItalic */
+
+@font-face {
+    font-family: 'StaraSemiBoldItalic';
+    src: url('../../fonts/Stara-SemiBoldItalic.woff') format('woff'), /* Modern Browsers */
+         url('../../fonts/Stara-SemiBoldItalic.woff2') format('woff2'), /* Modern Browsers */
+         url('../../fonts/Stara-SemiBoldItalic.ttf') format('truetype'); /* Safari, Android, iOS */
+    
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
