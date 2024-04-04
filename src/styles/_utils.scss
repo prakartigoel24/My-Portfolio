@@ -5,9 +5,9 @@ $font-regular: 'StaraMedium', sans-serif;
 $font-medium: 'StaraExtraBold', sans-serif;
 $font-bold: 'StaraBlack', sans-serif;
 
-$font-size-extralarge:4rem;
-$font-size-large: 3rem ;
-$font-size-medium: 2rem;
+$font-size-extralarge:3.6rem;
+$font-size-large: 2.4rem ;
+$font-size-medium: 1.6rem;
 $font-size-small:  1rem;
 
 
@@ -21,22 +21,24 @@ $text-color-muted: #B4BBBD;
 $text-color: #E3E5E7;
 $support-color: #1B2326;
 $black :#000000;
-$white: #ffffff;
 
 /*base size*/
-$base-size: 0.5rem; //8px
+$base-size: 1rem; //8px
 
 /* Spacing */
 $base-spacing: 1rem; //16px
 $medium-spacing: 2rem;
 $large-spacing: 4rem;
 
+/* Margin */
 $margin-small: calc($base-spacing / 2); //8px
 $margin-medium: $base-spacing;
 $margin-large: calc($base-spacing * 2);
-$padding-small: $margin-small;
-$padding-medium: $margin-medium;
-$padding-large: $margin-large;
+
+/* Padding */
+$padding-small: calc($base-spacing / 2); //8px
+$padding-medium: $base-spacing;
+$padding-large: calc($base-spacing * 2);
 
 
 /* Define your breakpoints as variables */
@@ -46,6 +48,8 @@ $breakpoint-md: 768px; // Medium screens (tablets)
 $breakpoint-lg: 992px;  // Large screens (laptops)
 $breakpoint-xl: 1200px; // Extra large screens (desktops)
 
+
+/* ------------------------- MIXINS ------------------------- */
 
 // Flex Centering Elements
 @mixin flex-center($flex-direction:row, $justify-content:center, $align-items:center) {
@@ -102,6 +106,7 @@ $breakpoint-xl: 1200px; // Extra large screens (desktops)
     }
        
     &:hover {
+        transform: scale(1.2);
         color: $support-color;
         font-weight: bold;
     }
@@ -109,6 +114,48 @@ $breakpoint-xl: 1200px; // Extra large screens (desktops)
     &:active {
         filter: brightness(.6);
     }
-       
 };
+
+/* -------------------------UTILITY CLASSES ------------------------- */
+
+.heading_1{
+    font-size: $font-size-extralarge;
+}
+
+.heading_2{
+    font-size: $font-size-large;
+}
+
+.heading_3{
+    font-size: $font-size-medium;
+}
+
+.btn{
+    margin: $margin-medium;
+
+    &_accent{
+        @extend .btn;
+        @include button-style($accent-color-lighter);
+    }
+
+    &_secondary{
+        @extend .btn;
+        @include button-style($secondary-color-lighter);
+    }
+}
+
+.section{
+    margin:$margin-large $margin-medium;
+    padding: $padding-medium;
+    
+    &_primary{
+        @extend .section;
+        background-color: $primary-color;
+    }
+
+    &_support{
+        @extend .section;
+        background-color: $support-color;
+    }
+}
 

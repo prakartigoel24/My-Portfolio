@@ -25,6 +25,7 @@ html{
 html,body {
     font-family: $font-regular;
     background-color: $primary-color;
+    color: $text-color;
 }
 
 
@@ -39,7 +40,7 @@ h4 ,h5, h6 {
 }
 
 p{
-    color: $text-color;
+    color: $text-color-muted;
     font-family: $font-regular;
     font-size: $font-size-small;
     letter-spacing: 0.05rem;
