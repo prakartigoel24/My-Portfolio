@@ -1,16 +1,37 @@
 @import url('./stara-fonts/stara-main.scss');
 
 // Resets
-* {
-    margin: 0;
-    padding: 0;
+*, *::after, *::before {
     box-sizing: border-box; 
 };
 
+*{
+    margin: 0;
+    padding: 0;
+};
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+};
+
+html{
+    font-size: 100%;
+    width: 100%;
+    height: 100%;
+}
+
 
 /* Fonts */
-$heading-font: 'StaraBlack', sans-serif;
-$body-font: 'StaraMedium', sans-serif;
+$font-regular: 'StaraMedium', sans-serif;
+$font-medium: 'StaraExtraBold', sans-serif;
+$font-bold: 'StaraBlack', sans-serif;
+
+$font-size-extralarge:5rem;
+$font-size-large: 3rem ;
+$font-size-medium: 2rem;
+$font-size-small:  1rem;
 
 
 /* Colors */
@@ -26,8 +47,8 @@ $support-color: #1B2326;
 
 /* Spacing */
 $base-spacing: 1rem; //16px
-$double-spacing: 2rem;
-$section-spacing: 4rem;
+$medium-spacing: 2rem;
+$large-spacing: 4rem;
 
 $margin-small: $base-spacing / 2;
 $margin-medium: $base-spacing;
@@ -46,19 +67,24 @@ $breakpoint-xl: 1200px; // Extra large screens (desktops)
 
 
 html,body {
-    font-family: $body-font;
+    font-family: $font-regular;
     background-color: $primary-color;
 }
 
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: $heading-font;
+h1, h2, h3{
+    font-family: $font-bold;
     color: $text-color;
 }
 
+h4 ,h5, h6 {
+    font-family: $font-medium;
+    color: $text-color;
+}
 
 p{
     color: $text-color;
-    font-family: $body-font;
+    font-family: $font-regular;
+    font-size: $font-size-small;
 }
 
