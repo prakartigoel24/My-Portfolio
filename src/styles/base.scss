@@ -1,4 +1,4 @@
-@import url('./stara-fonts/stara-main.scss');
+@import './utils';
 
 // Resets
 *, *::after, *::before {
@@ -22,50 +22,6 @@ html{
     height: 100%;
 }
 
-
-/* Fonts */
-$font-regular: 'StaraMedium', sans-serif;
-$font-medium: 'StaraExtraBold', sans-serif;
-$font-bold: 'StaraBlack', sans-serif;
-
-$font-size-extralarge:5rem;
-$font-size-large: 3rem ;
-$font-size-medium: 2rem;
-$font-size-small:  1rem;
-
-
-/* Colors */
-$primary-color: #171B1E;
-$secondary-color-darker: #5E1411; 
-$secondary-color-lighter: #db2e0c; 
-$accent-color-darker: #235150;
-$accent-color-lighter: #70ffd7;
-$text-color-muted: #B4BBBD;
-$text-color: #E3E5E7;
-$support-color: #1B2326;
-
-
-/* Spacing */
-$base-spacing: 1rem; //16px
-$medium-spacing: 2rem;
-$large-spacing: 4rem;
-
-$margin-small: $base-spacing / 2;
-$margin-medium: $base-spacing;
-$margin-large: $base-spacing * 2;
-$padding-small: $margin-small;
-$padding-medium: $margin-medium;
-$padding-large: $margin-large;
-
-
-/* Define your breakpoints as variables */
-$breakpoint-xs: 320px; // Extra small screens (phones)
-$breakpoint-sm: 576px; // Small screens (tablets)
-$breakpoint-md: 768px; // Medium screens (tablets)
-$breakpoint-lg: 992px;  // Large screens (laptops)
-$breakpoint-xl: 1200px; // Extra large screens (desktops)
-
-
 html,body {
     font-family: $font-regular;
     background-color: $primary-color;
@@ -86,5 +42,8 @@ p{
     color: $text-color;
     font-family: $font-regular;
     font-size: $font-size-small;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.1rem;
+    line-height: 1.25;
 }
 

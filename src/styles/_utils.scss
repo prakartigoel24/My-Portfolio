@@ -1,0 +1,114 @@
+@import url('./stara-fonts/stara-main.scss');
+
+/* Fonts */
+$font-regular: 'StaraMedium', sans-serif;
+$font-medium: 'StaraExtraBold', sans-serif;
+$font-bold: 'StaraBlack', sans-serif;
+
+$font-size-extralarge:4rem;
+$font-size-large: 3rem ;
+$font-size-medium: 2rem;
+$font-size-small:  1rem;
+
+
+/* Colors */
+$primary-color: #171B1E;
+$secondary-color-darker: #5E1411; 
+$secondary-color-lighter: #db2e0c; 
+$accent-color-darker: #235150;
+$accent-color-lighter: #70ffd7;
+$text-color-muted: #B4BBBD;
+$text-color: #E3E5E7;
+$support-color: #1B2326;
+$black :#000000;
+$white: #ffffff;
+
+/*base size*/
+$base-size: 0.5rem; //8px
+
+/* Spacing */
+$base-spacing: 1rem; //16px
+$medium-spacing: 2rem;
+$large-spacing: 4rem;
+
+$margin-small: calc($base-spacing / 2); //8px
+$margin-medium: $base-spacing;
+$margin-large: calc($base-spacing * 2);
+$padding-small: $margin-small;
+$padding-medium: $margin-medium;
+$padding-large: $margin-large;
+
+
+/* Define your breakpoints as variables */
+$breakpoint-xs: 320px; // Extra small screens (phones)
+$breakpoint-sm: 576px; // Small screens (tablets)
+$breakpoint-md: 768px; // Medium screens (tablets)
+$breakpoint-lg: 992px;  // Large screens (laptops)
+$breakpoint-xl: 1200px; // Extra large screens (desktops)
+
+
+// Flex Centering Elements
+@mixin flex-center($flex-direction:row, $justify-content:center, $align-items:center) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-direction: $flex-direction;
+}
+
+// Button styling 
+@mixin button-style($color) {
+    display: inline-block;
+    padding: $padding-small $padding-medium;
+    border: 1px solid;
+    background-color: transparent;
+    border-radius: 0.6rem; 
+    color: $color;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: $font-regular;
+    font-size: $font-size-small;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.3s ease;
+    z-index: 1;
+
+    &::before, &::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 50px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+        background-color: $color;
+        transition: 1s ease;
+    }
+       
+    &::before {
+        top: -1rem;
+        left: -1rem;
+    }
+       
+    &::after {
+        left: calc(100% + 1rem);
+        top: calc(100% + 1rem);
+    }
+       
+    &:hover::before, &:hover::after {
+        height: 410px;
+        width: 410px;
+    }
+       
+    &:hover {
+        color: $support-color;
+        font-weight: bold;
+    }
+    
+    &:active {
+        filter: brightness(.6);
+    }
+       
+};
+
