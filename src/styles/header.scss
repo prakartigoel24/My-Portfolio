@@ -1,0 +1,63 @@
+@import "./base.scss";
+
+header {
+  @include flex-center(
+    $flex-direction: row,
+    $align-items: center,
+    $justify-content: space-between
+  );
+  height: 4.5rem;
+  background-color: $support-color;
+  font-family: $font-medium;
+  letter-spacing: 0.1rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: $padding-small + 0.3rem $padding-medium;
+
+  img {
+    width: 3rem;
+    border-radius: 5rem;
+  }
+
+  .navbar {
+    @include flex-center(
+      column,
+      $align-items: center,
+      $justify-content: center
+    );
+    background-color: $support-color;
+    position: absolute;
+    top: -215%;
+    left: 0;
+    width: 100%;
+    padding: $padding-medium * 2 0;
+    opacity: 0.8;
+    gap: 1.5rem;
+    z-index: 10;
+    display: none;
+    border-top: 1px solid $accent-color-lighter;
+  }
+
+  .slide-down {
+    display: flex;
+    animation: slide-down 1s ease 0s 1 forwards;
+  }
+
+}
+
+.menu-btn {
+  background-color: transparent;
+  border: none;
+  margin-top: $margin-small;
+  font-size: $font-size-medium;
+  color: $accent-color-darker;
+  transition: all ease-in 0.15s;
+  z-index: 99;
+
+  &:hover {
+    color: lighten($color: $accent-color-darker, $amount: 10);
+    transform: scale(1.1);
+  }
+}

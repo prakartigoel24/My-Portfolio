@@ -15,7 +15,7 @@ $font-size-small:  1rem;
 $primary-color: #171B1E;
 $secondary-color-darker: #5E1411; 
 $secondary-color-lighter: #db2e0c; 
-$accent-color-darker: #235150;
+$accent-color-darker: #3a7d7c;
 $accent-color-lighter: #70ffd7;
 $text-color-muted: #B4BBBD;
 $text-color: #E3E5E7;
@@ -42,7 +42,7 @@ $padding-large: calc($base-spacing * 2);
 
 
 /* Define your breakpoints as variables */
-$breakpoint-xs: 320px; // Extra small screens (phones)
+$breakpoint-xs: 340px; // Extra small screens (phones)
 $breakpoint-sm: 576px; // Small screens (tablets)
 $breakpoint-md: 768px; // Medium screens (tablets)
 $breakpoint-lg: 992px;  // Large screens (laptops)
@@ -159,3 +159,26 @@ $breakpoint-xl: 1200px; // Extra large screens (desktops)
     }
 }
 
+/* ANIMATION UTILS */
+
+
+@keyframes slide-down {
+    0% {
+      transform: translateY(0);
+    }
+  
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+
+  @keyframes slide-up {
+    0% {
+      transform: translateY(100%);
+    }
+  
+    100% {
+      transform: translateY(-100%);
+    }
+  }

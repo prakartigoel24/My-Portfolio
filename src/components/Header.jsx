@@ -1,9 +1,32 @@
-import React from 'react'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { navLinks } from "../constants";
+import "../styles/header.scss";
+import { GiHamburgerMenu, GiCrossedBones } from "react-icons/gi";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div>Header</div>
-  )
-}
+    <header>
+      <img src="/images/logo.png" alt="Logo" />
+      <nav className={`navbar ${isOpen && "slide-down"}`}>
+        {navLinks.map((item) => {
+          return (
+            <Link key={item.id} to={item.path}>
+              {item.title}
+            </Link>
+          );
+        })}
+      </nav>
+      <button onClick={() => setIsOpen(!isOpen)} className="menu-btn">
+        {isOpen ? (
+         <GiCrossedBones/>
+        ) : (
+          <GiHamburgerMenu/>
+        )}
+      </button>
+    </header>
+  );
+};
 
-export default Header
+export default Header;
