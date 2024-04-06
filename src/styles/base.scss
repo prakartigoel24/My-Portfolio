@@ -55,6 +55,18 @@ h4 ,h5, h6 {
     color: $text-color;
 }
 
+h1{
+    font-size: $font-size-extralarge;
+}
+
+h2{
+    font-size: $font-size-large;
+}
+
+h3{
+    font-size: $font-size-medium;
+}
+
 p{
     color: $text-color-muted;
     font-family: $font-regular;

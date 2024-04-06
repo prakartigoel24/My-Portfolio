@@ -1,7 +1,7 @@
 @import "./base.scss";
 
 .section_hero{
-
+    @include flex-center(column);
     .hero_1{
         text-align: center;
 
@@ -15,7 +15,7 @@
         padding: $padding-large $padding-medium;
         margin: $margin-large 0;
         height:100%;
-        width: 100%;
+        width: 80%;
         background-image: linear-gradient(to top, $accent-color-darker, $secondary-color-darker);
         border-radius: 78% 22% 81% 19% / 38% 68% 32% 62% ;
     }
