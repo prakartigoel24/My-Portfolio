@@ -14,7 +14,7 @@ const HomePage = () => {
         <Hero />
       </main>
       <SkillSection />
-      <PortfolioSection />
+      <PortfolioSection isSubsection={true}/>
       <ExperienceEduSection />
       <TestimonialSection />
       <ContactForm />
