@@ -10,8 +10,8 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import cpp from "./tech/cpp.svg";
-import python from "./tech/python.svg";
+import cpp from "./tech/cpp.png";
+import python from "./tech/python.png";
 
 export {
   microsoft,

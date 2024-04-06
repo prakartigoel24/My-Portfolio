@@ -16,6 +16,22 @@ img {
     height: auto;
 };
 
+a{
+    text-decoration: none;
+    color: $text-color-muted;
+    transition: all ease-in .15s;
+
+    &:hover{
+        color: $accent-color-lighter;
+        transform: scale(1.1);
+    }
+}
+
+ul,
+ol {
+  list-style: none; 
+}
+
 html{
     font-size: 100%;
     width: 100%;
