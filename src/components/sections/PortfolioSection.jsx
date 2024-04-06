@@ -1,4 +1,5 @@
 import React from "react";
+import "../../styles/portfolio.scss";
 import { projects } from "../../constants";
 import PortfolioItem from "./PortfolioItem";
 

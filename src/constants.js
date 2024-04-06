@@ -164,7 +164,7 @@ import {
           color: "pink",
         },
       ],
-      image: "",
+      image: "/images/cyber-1.jpeg",
       source_code_link: "https://github.com/prakartigoel24/Symphony",
     },
     {
@@ -174,18 +174,18 @@ import {
       tags: [
         {
           name: "react",
-          color: "blue-text-gradient",
+          color: "crimson",
         },
         {
           name: "api",
-          color: "green-text-gradient",
+          color: "royalblue",
         },
         {
           name: "tailwind",
           color: "pink",
         },
       ],
-      image: "",
+      image: "/images/cyber-2.jpeg",
       source_code_link: "https://github.com/prakartigoel24/CryptX",
     },
     {
@@ -207,10 +207,10 @@ import {
         },
         {
             name : "numpy",
-            color: "brown",
+            color: "aqua",
         }
       ],
-      image: "",
+      image: "/images/cyber-3.jpeg",
       source_code_link: "https://github.com/prakartigoel24/Handwritten-Digit-Recognition-Project",
     },
     {
@@ -231,7 +231,7 @@ import {
             color:"red",
         }
       ],
-      image: "",
+      image: "/images/cyber-4.jpeg",
       source_code_link: "https://github.com/prakartigoel24/FaceRecognitionProject-CrimeAssist",
     },
     {
