@@ -15,6 +15,7 @@ header {
   left: 0;
   width: 100%;
   padding: $padding-small + 0.3rem $padding-medium;
+  z-index: 99;
 
   img {
     width: 3rem;
@@ -35,7 +36,7 @@ header {
     padding: $padding-medium * 2 0;
     opacity: .96;
     gap: 1.5rem;
-    z-index: 10;
+    z-index: 99;
     display: none;
     border-top: 1px solid $accent-color-lighter;
   }

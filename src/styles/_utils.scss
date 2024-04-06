@@ -75,7 +75,7 @@ $breakpoint-xl: 1200px; // Extra large screens (desktops)
     text-transform: capitalize;
     text-decoration: none;
     transition: 0.3s ease;
-    z-index: 1;
+    z-index: 0;
 
     &::before, &::after {
         content: '';
@@ -145,8 +145,7 @@ $breakpoint-xl: 1200px; // Extra large screens (desktops)
 }
 
 .section{
-    margin:$margin-large $margin-medium;
-    padding: $padding-medium;
+    padding: $padding-large;
     
     &_primary{
         @extend .section;
@@ -158,6 +157,12 @@ $breakpoint-xl: 1200px; // Extra large screens (desktops)
         background-color: $support-color;
     }
 }
+
+.container{
+    margin: $margin-large 0;
+    padding: $padding-small;
+}
+
 
 /* ANIMATION UTILS */
 
