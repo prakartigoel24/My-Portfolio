@@ -95,7 +95,7 @@ import {
       company_name: "I.T.S Engineering College",
       icon: its,
       iconBg: "",
-      date: "March 2020 - April 2021",
+      date: "August 2020 - September 2024",
       points: [
         "Eagerly learning the fundamentals of programming languages, algorithms, and collaboration.",
         "Actively developing my problem-solving, critical thinking, and communication skills through coursework and group projects.",
