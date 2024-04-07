@@ -1,0 +1,31 @@
+@import "./base.scss";
+
+.section_experienceEdu{
+
+    .container{
+        margin: 0;
+    }
+
+    .experienceEdu_item_card{
+        background-color: $primary-color;
+        padding: $padding-large;
+        border-radius: 2rem;
+        transform: scale(0.95);
+        @include flex-center(column, $align-items:start);
+        gap: .5rem;
+
+        h3{
+            color: $secondary-color-lighter;
+        }
+
+        h4{
+            color : $text-color-muted;
+        }
+
+        li{
+            list-style-type: disc;
+            padding: $padding-small;
+            margin-left: $margin-small;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../styles/portfolio.scss";
 import { projects } from "../../constants";
-import PortfolioItem from "./PortfolioItem";
+import PortfolioItem from "../PortfolioItem";
 import { Link } from "react-router-dom";
 
 const PortfolioSection = ({ isSubsection }) => {
