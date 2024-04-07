@@ -152,7 +152,7 @@ import {
         "Symphony is a versatile platform for music lovers to enjoy their favorite tunes and explore new ones. Users can discover top songs, artists, and delve into music of different genres. Symphony keeps users them up-to-date with the most popular tracks in their community as well.",
       tags: [
         {
-          name: "react",
+          name: "reactjs",
           color: "blue",
         },
         {
@@ -173,7 +173,7 @@ import {
         "CryptX is a comprehensive web application designed to provide users with detailed information about various cryptocurrencies and exchanges. It features an intuitive interface that shows a variety of coin details, including current price, historical data, market cap, and more. The app also provides information about various cryptocurrency exchanges, enabling users to compare and evaluate their options.",
       tags: [
         {
-          name: "react",
+          name: "reactjs",
           color: "crimson",
         },
         {
@@ -244,7 +244,7 @@ import {
           color: "yellow",
         },
       ],
-      image: "",
+      image: "/images/merlin.jpeg",
       source_code_link: "https://github.com/prakartigoel24/Voice-Assistant-Project",
     },
     

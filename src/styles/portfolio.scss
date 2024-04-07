@@ -1,6 +1,20 @@
 @import "./base.scss";
 
 .section_portfolio {
+
+  .project_filter{
+    background-color: $support-color;
+    @include flex-center($justify-content: space-between);
+    padding: $padding-small;
+    margin-bottom: $margin-large;
+
+    #project_filter_options{
+      color: $accent-color-lighter;
+      border: none;
+      background-color: $support-color;
+    }
+  }
+
   .portfolio_item {
     @include flex-center(column);
     background-color: $black;
