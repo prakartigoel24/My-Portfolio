@@ -27,17 +27,3 @@ const ExperienceEduSection = () => {
 };
 
 export default ExperienceEduSection;
-
-
-/* title: "Computer Science Engineering",
-company_name: "I.T.S Engineering College",
-icon: its,
-iconBg: "",
-date: "March 2020 - April 2021",
-points: [
-  "Eagerly learning the fundamentals of programming languages, algorithms, and collaboration.",
-  "Actively developing my problem-solving, critical thinking, and communication skills through coursework and group projects.",
-  "Recently led a team project to develop a web app for social networking and collaboratiob among peers in college."
-]
-
-*/
