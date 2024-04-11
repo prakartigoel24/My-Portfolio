@@ -1,9 +1,82 @@
-import React from 'react'
+import React, { useState } from "react";
+import "../styles/contactForm.scss";
 
 const ContactForm = () => {
-  return (
-    <div>ContactForm</div>
-  )
-}
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-export default ContactForm
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+  };
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  return (
+    <section className="section section_support section_contact">
+      <h2>Contact Me</h2>
+      <div className="container">
+        <form onSubmit={handleSubmit} className="contact_form">
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleInputChange}
+            required
+            autoComplete="off"
+            placeholder="Enter your name"
+          />
+
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            autoComplete="off"
+            placeholder="Enter your email"
+
+          />
+
+          <label htmlFor="subject">Subject:</label>
+          <input
+            type="subject"
+            name="subject"
+            value={formData.subject}
+            onChange={handleInputChange}
+            required
+            autoComplete="off"
+            placeholder="Write the subject"
+
+          />
+
+          <label htmlFor="message">Message:</label>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
+            rows={8}
+            cols={10}
+            required
+            autoComplete="off"
+            placeholder="Write your message"
+          />
+
+          <button type="submit" className="btn_accent">Send Message</button>
+        </form>
+      </div>
+    </section>
+  );
+};
+export default ContactForm;
