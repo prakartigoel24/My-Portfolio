@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import "../styles/contactForm.scss";
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+
+  const emailjsServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const emailjsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const emailjsPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,6 +18,12 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
+
+    emailjs
+      .sendForm(emailjsServiceId, emailjsTemplateId, '.contact_form', {
+        publicKey: emailjsPublicKey,
+      }).then(()=>console.log("success"))
+      .catch(err => console.log(err));
   };
 
   const handleInputChange = (e) => {
@@ -46,7 +58,6 @@ const ContactForm = () => {
             required
             autoComplete="off"
             placeholder="Enter your email"
-
           />
 
           <label htmlFor="subject">Subject:</label>
