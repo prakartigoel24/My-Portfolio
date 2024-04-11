@@ -3,10 +3,11 @@ import "../../styles/testimonial.scss";
 import { testimonials } from "../../constants";
 import TestimonialItem from "../TestimonialItem";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation,Autoplay } from "swiper/modules";
+// import "swiper/css/navigation";
+import { Navigation, Autoplay } from "swiper/modules";
 
 const TestimonialSection = () => {
   return (
@@ -17,8 +18,12 @@ const TestimonialSection = () => {
           modules={[Autoplay, Navigation]}
           spaceBetween={5}
           slidesPerView={"auto"}
-          navigation
-          autoplay={{ delay: 1500,disableOnInteraction: false, }}
+          navigation={{
+            prevEl: ".swiper-nav-prev",
+            nextEl: ".swiper-nav-next",
+            clickable: true,
+          }}
+          autoplay={{ delay: 1500, disableOnInteraction: false }}
           loop={true}
         >
           {testimonials.map((item, i) => {
@@ -34,6 +39,12 @@ const TestimonialSection = () => {
               </SwiperSlide>
             );
           })}
+          <button className="swiper-nav-prev">
+            <IoIosArrowBack />
+          </button>
+          <button className="swiper-nav-next">
+            <IoIosArrowForward />
+          </button>
         </Swiper>
       </div>
     </section>
