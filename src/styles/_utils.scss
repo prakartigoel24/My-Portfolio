@@ -5,15 +5,15 @@ $font-regular: 'StaraMedium', sans-serif;
 $font-medium: 'StaraExtraBold', sans-serif;
 $font-bold: 'StaraBlack', sans-serif;
 
-$font-size-extralarge:3.6rem;
-$font-size-large: 2.4rem ;
-$font-size-medium: 1.6rem;
+$font-size-extralarge:2rem;
+$font-size-large: 1.7rem ;
+$font-size-medium: 1.4rem;
 $font-size-small:  1rem;
 
 
 /* Colors */
 $primary-color: #171B1E;
-$secondary-color-darker: #5E1411; 
+$secondary-color-darker: #950f0a; 
 $secondary-color-lighter: #db2e0c; 
 $accent-color-darker: #3a7d7c;
 $accent-color-lighter: #70ffd7;
@@ -75,7 +75,7 @@ $breakpoint-xl: 1200px; // Extra large screens (desktops)
     text-transform: capitalize;
     text-decoration: none;
     transition: 0.3s ease;
-    z-index: 1;
+    z-index: 0;
 
     &::before, &::after {
         content: '';
@@ -145,8 +145,7 @@ $breakpoint-xl: 1200px; // Extra large screens (desktops)
 }
 
 .section{
-    margin:$margin-large $margin-medium;
-    padding: $padding-medium;
+    padding: $padding-large;
     
     &_primary{
         @extend .section;
@@ -158,6 +157,12 @@ $breakpoint-xl: 1200px; // Extra large screens (desktops)
         background-color: $support-color;
     }
 }
+
+.container{
+    margin: $margin-large 0;
+    padding: $padding-small;
+}
+
 
 /* ANIMATION UTILS */
 

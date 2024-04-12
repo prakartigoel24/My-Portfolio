@@ -1,0 +1,34 @@
+@import "./base.scss";
+
+.section_hero{
+    @include flex-center(column);
+    .hero_1{
+        text-align: center;
+
+        h1{
+            color: $accent-color-lighter;
+            letter-spacing: .2rem;
+        }
+    }
+
+    .hero_2{
+        padding: $padding-large $padding-medium;
+        margin: $margin-large 0;
+        height:100%;
+        width: 80%;
+        background-image: linear-gradient(to top, $accent-color-darker, $secondary-color-darker);
+        border-radius: 78% 22% 81% 19% / 38% 68% 32% 62% ;
+    }
+
+    .hero_3{
+        text-align: center;
+
+        p{
+            margin: $margin-medium 0;
+        }
+
+        span{
+            color: $secondary-color-darker;
+        }
+    }
+}

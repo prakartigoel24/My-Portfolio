@@ -12,7 +12,7 @@ const Header = () => {
       <nav className={`navbar ${isOpen && "slide-down"}`}>
         {navLinks.map((item) => {
           return (
-            <Link key={item.id} to={item.path}>
+            <Link key={item.id} to={item.path} onClick={() => setIsOpen(false)}>
               {item.title}
             </Link>
           );

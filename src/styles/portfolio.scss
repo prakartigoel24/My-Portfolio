@@ -1,0 +1,85 @@
+@import "./base.scss";
+
+.section_portfolio {
+
+  .project_filter{
+    background-color: $support-color;
+    @include flex-center($justify-content: space-between);
+    padding: $padding-small;
+    margin-bottom: $margin-large;
+
+    #project_filter_options{
+      color: $accent-color-lighter;
+      border: none;
+      background-color: $support-color;
+    }
+  }
+
+  .portfolio_item {
+    @include flex-center(column);
+    background-color: $black;
+    width: 100%;
+    text-align: center;
+    padding: $padding-medium;
+    border-radius: 2rem;
+    gap: 2rem;
+    margin-bottom: $margin-large;
+    padding: $padding-medium;
+    transition: all 0.4s ease;
+    
+    .project_cover_image{
+       border-radius: 2rem;
+       object-fit: cover;
+       overflow: hidden;
+       max-width: 22rem;
+    }
+
+    &:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 0px 8px 8px $accent-color-darker;
+    }
+    
+    &_content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      img {
+        filter: invert(1);
+      }
+    }
+
+    &_tech {
+      @include flex-center(row, $justify-content:start);
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      h5 {
+        background-color: $support-color;
+        padding: 0.5rem 1rem;
+        border-radius: 3rem;
+
+        &:hover{
+            transform: scale(1.1);
+            cursor: default;
+        }
+      }
+    }
+
+    &_links {
+        @include flex-center(row, $justify-content:start);
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        > a {
+            border: 3px solid $accent-color-darker;
+            border-radius: 100%;
+
+            &:hover{
+                border-color: $accent-color-lighter;
+            }
+        }
+    }
+
+  }
+}

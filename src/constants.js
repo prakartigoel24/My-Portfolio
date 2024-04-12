@@ -95,7 +95,7 @@ import {
       company_name: "I.T.S Engineering College",
       icon: its,
       iconBg: "",
-      date: "March 2020 - April 2021",
+      date: "August 2020 - September 2024",
       points: [
         "Eagerly learning the fundamentals of programming languages, algorithms, and collaboration.",
         "Actively developing my problem-solving, critical thinking, and communication skills through coursework and group projects.",
@@ -152,7 +152,7 @@ import {
         "Symphony is a versatile platform for music lovers to enjoy their favorite tunes and explore new ones. Users can discover top songs, artists, and delve into music of different genres. Symphony keeps users them up-to-date with the most popular tracks in their community as well.",
       tags: [
         {
-          name: "react",
+          name: "reactjs",
           color: "blue",
         },
         {
@@ -164,7 +164,7 @@ import {
           color: "pink",
         },
       ],
-      image: "",
+      image: "/images/cyber-1.jpeg",
       source_code_link: "https://github.com/prakartigoel24/Symphony",
     },
     {
@@ -173,19 +173,19 @@ import {
         "CryptX is a comprehensive web application designed to provide users with detailed information about various cryptocurrencies and exchanges. It features an intuitive interface that shows a variety of coin details, including current price, historical data, market cap, and more. The app also provides information about various cryptocurrency exchanges, enabling users to compare and evaluate their options.",
       tags: [
         {
-          name: "react",
-          color: "blue-text-gradient",
+          name: "reactjs",
+          color: "crimson",
         },
         {
           name: "api",
-          color: "green-text-gradient",
+          color: "royalblue",
         },
         {
           name: "tailwind",
           color: "pink",
         },
       ],
-      image: "",
+      image: "/images/cyber-2.jpeg",
       source_code_link: "https://github.com/prakartigoel24/CryptX",
     },
     {
@@ -207,10 +207,10 @@ import {
         },
         {
             name : "numpy",
-            color: "brown",
+            color: "aqua",
         }
       ],
-      image: "",
+      image: "/images/cyber-3.jpeg",
       source_code_link: "https://github.com/prakartigoel24/Handwritten-Digit-Recognition-Project",
     },
     {
@@ -231,7 +231,7 @@ import {
             color:"red",
         }
       ],
-      image: "",
+      image: "/images/cyber-4.jpeg",
       source_code_link: "https://github.com/prakartigoel24/FaceRecognitionProject-CrimeAssist",
     },
     {
@@ -244,7 +244,7 @@ import {
           color: "yellow",
         },
       ],
-      image: "",
+      image: "/images/merlin.jpeg",
       source_code_link: "https://github.com/prakartigoel24/Voice-Assistant-Project",
     },
     
