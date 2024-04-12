@@ -1,19 +1,17 @@
 @import "./base.scss";
 
 .section_portfolio {
-
-   & .container{
+  & .container {
     @include flex-center(column);
   }
 
-
-  .project_filter{
+  .project_filter {
     background-color: $support-color;
     @include flex-center($justify-content: space-between);
     padding: $padding-small;
     margin-bottom: $margin-large;
 
-    #project_filter_options{
+    #project_filter_options {
       color: $accent-color-lighter;
       border: none;
       background-color: $support-color;
@@ -31,19 +29,19 @@
     margin-bottom: $margin-large;
     padding: $padding-medium;
     transition: all 0.4s ease;
-    
-    .project_cover_image{
-       border-radius: 2rem;
-       object-fit: cover;
-       overflow: hidden;
-       max-width: 22rem;
+
+    .project_cover_image {
+      border-radius: 2rem;
+      object-fit: cover;
+      overflow: hidden;
+      max-width: 22rem;
     }
 
-    &:hover{
-        transform: scale(1.05);
-        box-shadow: 0px 0px 8px 8px $accent-color-darker;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 8px 8px $accent-color-darker;
     }
-    
+
     &_content {
       display: flex;
       flex-direction: column;
@@ -55,7 +53,7 @@
     }
 
     &_tech {
-      @include flex-center(row, $justify-content:start);
+      @include flex-center(row, $justify-content: start);
       flex-wrap: wrap;
       gap: 1rem;
 
@@ -64,27 +62,58 @@
         padding: 0.5rem 1rem;
         border-radius: 3rem;
 
-        &:hover{
-            transform: scale(1.1);
-            cursor: default;
+        &:hover {
+          transform: scale(1.1);
+          cursor: default;
         }
       }
     }
 
     &_links {
-        @include flex-center(row, $justify-content:start);
-        flex-wrap: wrap;
-        gap: 1rem;
+      @include flex-center(row, $justify-content: start);
+      flex-wrap: wrap;
+      gap: 1rem;
 
-        > a {
-            border: 3px solid $accent-color-darker;
-            border-radius: 100%;
+      > a {
+        border: 3px solid $accent-color-darker;
+        border-radius: 100%;
 
-            &:hover{
-                border-color: $accent-color-lighter;
-            }
+        &:hover {
+          border-color: $accent-color-lighter;
         }
+      }
     }
-
   }
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+
+  .section_portfolio {
+
+    & .portfolio_item{
+
+      & .project_cover_image{
+        max-width: fit-content;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+
+  .section_portfolio {
+
+    & .portfolio_item{
+      @include flex-center;
+
+      & .project_cover_image{
+      }
+
+      &_content{
+        max-width: 55%;
+        text-align: left;
+      }
+    }
+  }
+
 }
