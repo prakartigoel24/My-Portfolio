@@ -1,0 +1,28 @@
+@import '../styles/base.scss';
+
+
+.section_subpage_hero{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10rem -8rem;
+    @include flex-center(column);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    & .hero_2{
+        @include flex-center(column);
+        gap: 2rem;
+    }
+}
+
+.bg-prism-spiral{
+    background-image: $bg-prism-spiral;
+}
+
+.bg-triangle{
+    background-image: $bg-triangle;
+}
+.bg-spiral{
+    background-image: $bg-spiral;
+}

@@ -1,0 +1,39 @@
+@import "./base.scss";
+
+.section_about_me {
+  background-image: url("https://media.giphy.com/media/l1Et7Qw1XjvunS0Io/giphy.gif?cid=ecf05e47w0thiqfnondypezexg971wvh0hz9fl6djzt5sn6s&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+  background-blend-mode: darken;
+  background-attachment: fixed;
+
+  & .container {
+    @include flex-center(column);
+    margin-top: 0;
+    gap: 2rem;
+    text-align: center;
+
+    & img {
+      border-radius: 100%;
+    }
+
+    & p {
+      font-family: $font-medium;
+      color: $text-color-muted;
+    }
+
+    & span:nth-last-of-type(5) {
+      color: $secondary-color-darker;
+    }
+    & span:nth-last-of-type(4) {
+      color: $accent-color-darker;
+    }
+    & span:nth-last-of-type(3) {
+      color: $secondary-color-darker;
+    }
+    & span:nth-last-of-type(2) {
+      color: $accent-color-darker;
+    }
+    & span:nth-last-of-type(1) {
+      color: $secondary-color-darker;
+    }
+  }
+}
