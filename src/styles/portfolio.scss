@@ -2,6 +2,11 @@
 
 .section_portfolio {
 
+   & .container{
+    @include flex-center(column);
+  }
+
+
   .project_filter{
     background-color: $support-color;
     @include flex-center($justify-content: space-between);

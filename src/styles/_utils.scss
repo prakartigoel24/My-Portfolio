@@ -122,6 +122,14 @@ $bg-spiral: url('/public/images/bg-spiral.svg');
     }
 };
 
+@mixin divider($color:$accent-color-lighter){
+    width: 100%;
+    height: 1px;
+    background-color: $color;
+    margin: $margin-medium 0;
+}
+
+
 /* -------------------------UTILITY CLASSES ------------------------- */
 
 .heading_1{
@@ -167,6 +175,15 @@ $bg-spiral: url('/public/images/bg-spiral.svg');
 .container{
     margin: $margin-large 0;
     padding: $padding-small;
+}
+
+.divider{
+    &_accent{
+        @include divider($accent-color-lighter);
+    }
+    &_secondary{
+        @include divider($secondary-color-lighter);
+    }
 }
 
 

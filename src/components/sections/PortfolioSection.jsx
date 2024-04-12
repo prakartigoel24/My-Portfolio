@@ -54,7 +54,7 @@ const PortfolioSection = ({ isSubsection }) => {
             />
           );
         })}
-        <Link to="/portfolio" className="btn_accent">See complete portfolio</Link>
+        {isSubsection && <Link to="/portfolio" className="btn_accent">See complete portfolio</Link>}
       </div>
     </section>
   );
