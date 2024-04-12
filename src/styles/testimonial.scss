@@ -4,16 +4,18 @@
 
     position: relative;
     .container{
+        position: relative;
+        width: 100%;
         @include flex-center(column);
         gap: 3rem;
     }   
 
     .swiper-nav-prev{
         background:transparent;
-        position: relative;
-        left: -.5rem;
-        top: -12rem;
-        color: red;
+        position: absolute;
+        left: 0rem;
+        top: 5.6rem;
+        color: $secondary-color-darker;
         border: none;
         outline: none;
         font-size: $font-size-large;
@@ -22,9 +24,9 @@
     
     .swiper-nav-next{
         background:transparent;
-        position: relative;
-        right:-16rem;
-        top: -12rem;
+        position: absolute;
+        right: 0rem;
+        top: 5.6rem;
         color: $secondary-color-darker;
         border: none;
         outline: none;
