@@ -95,3 +95,10 @@ p{
         font-size: 100%;
     }
 }
+
+
+@media screen and (min-width: $breakpoint-lg){
+    html{
+        font-size: 110%;
+    }
+}
