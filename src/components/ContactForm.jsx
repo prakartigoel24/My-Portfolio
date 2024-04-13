@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "../styles/contactForm.scss";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
-
   const emailjsServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const emailjsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
   const emailjsPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -20,10 +19,11 @@ const ContactForm = () => {
     console.log("Form submitted:", formData);
 
     emailjs
-      .sendForm(emailjsServiceId, emailjsTemplateId, '.contact_form', {
+      .sendForm(emailjsServiceId, emailjsTemplateId, ".contact_form", {
         publicKey: emailjsPublicKey,
-      }).then(()=>console.log("success"))
-      .catch(err => console.log(err));
+      })
+      .then(() => console.log("success"))
+      .catch((err) => console.log(err));
   };
 
   const handleInputChange = (e) => {
@@ -69,7 +69,6 @@ const ContactForm = () => {
             required
             autoComplete="off"
             placeholder="Write the subject"
-
           />
 
           <label htmlFor="message">Message:</label>
@@ -84,8 +83,16 @@ const ContactForm = () => {
             placeholder="Write your message"
           />
 
-          <button type="submit" className="btn_accent">Send Message</button>
+          <button type="submit" className="btn_accent">
+            Send Message
+          </button>
         </form>
+        <div className="contact_illustration">
+          <img
+            src="/images/computer-illustration.png"
+            alt="Illustration of computer, email."
+          />
+        </div>
       </div>
     </section>
   );

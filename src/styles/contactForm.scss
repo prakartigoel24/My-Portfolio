@@ -8,6 +8,11 @@
 
   & .container {
     width: 100%;
+    
+    & .contact_illustration{
+      width: 40%;
+      display: none;
+    }
   }
 
   & .contact_form {
@@ -36,6 +41,7 @@
       outline: none;
       transition: all .30s ease-in-out;
       border: 1px solid $accent-color-lighter;
+      border-radius: .6rem;
 
       &:focus{
         box-shadow: 0 0 5px $accent-color-lighter;
@@ -43,4 +49,25 @@
       }
     }
   }
+}
+
+
+@media screen and (min-width: $breakpoint-md) {
+
+  .section_contact{
+    & .container{
+      display: flex;
+      align-items: start;
+      justify-content: space-evenly;
+      & .contact_illustration{
+        display: block;
+      }
+
+    }
+    
+    & .contact_form{
+      width: 50%;
+    }
+  }
+
 }
