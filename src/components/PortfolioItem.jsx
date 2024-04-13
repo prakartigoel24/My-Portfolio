@@ -14,7 +14,8 @@ const PortfolioItem = ({
       </div>
       <div className="portfolio_item_content">
         <h3>{name}</h3>
-        <p>{description}</p>
+
+        <div className="portfolio_item_description"><p>{description}</p></div>
         <div className="portfolio_item_tech">
           <h4>Technologies: </h4>
           {tags.map((tag, i) => {
@@ -42,5 +43,3 @@ const PortfolioItem = ({
 };
 
 export default PortfolioItem;
-
-//name, description, tags[{name,color}], image, source_code_link

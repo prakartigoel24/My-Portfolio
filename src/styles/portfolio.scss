@@ -34,7 +34,7 @@
       border-radius: 2rem;
       object-fit: cover;
       overflow: hidden;
-      max-width: 22rem;
+      max-width: fit-content;
     }
 
     &:hover {
@@ -91,15 +91,12 @@
   .section_portfolio {
 
     & .portfolio_item{
-
-      & .project_cover_image{
-        max-width: fit-content;
-      }
+      max-width: 85%;
     }
   }
 }
 
-@media screen and (min-width: $breakpoint-md) {
+@media screen and (min-width: $breakpoint-lg) {
 
   .section_portfolio {
 
@@ -107,13 +104,45 @@
       @include flex-center;
 
       & .project_cover_image{
+        align-self: self-start;
       }
-
       &_content{
-        max-width: 55%;
+        max-width: 60%;
         text-align: left;
       }
     }
   }
 
+}
+
+
+@media screen and (min-width: $breakpoint-xl) {
+
+  .section_portfolio {
+
+    & .container{
+      @include flex-center;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      & .portfolio_item{
+        @include flex-center(column);
+        max-width: 45%;
+        height: 46rem;
+        
+        &_content{
+          max-width: 90%;
+          text-align: center;
+          flex: 1;
+          overflow-y:auto;
+        }
+
+        &_description{
+          flex: 1;
+          overflow-y: auto;
+        }
+      }
+    }
+
+  }
 }
