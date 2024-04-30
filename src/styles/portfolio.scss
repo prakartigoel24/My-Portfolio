@@ -1,6 +1,8 @@
 @import "./base.scss";
 
 .section_portfolio {
+  @include flex-center(column);
+
   & .container {
     @include flex-center(column);
   }

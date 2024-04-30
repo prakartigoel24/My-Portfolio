@@ -3,6 +3,8 @@
 .section_testimonial{
 
     position: relative;
+    @include flex-center(column);
+
     .container{
         position: relative;
         width: 100%;

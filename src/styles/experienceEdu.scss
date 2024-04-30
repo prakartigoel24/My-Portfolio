@@ -1,6 +1,7 @@
 @import "./base.scss";
 
 .section_experienceEdu {
+  @include flex-center(column);
 
   .container {
     position: relative;

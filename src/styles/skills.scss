@@ -1,6 +1,7 @@
 @import "./base.scss";
 
 .section_skills{
+    @include flex-center(column);
 
     .container{
         @include  flex-center(row);
