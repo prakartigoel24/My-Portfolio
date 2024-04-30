@@ -1,5 +1,12 @@
 @import "./base.scss";
 
+$gradient-color-temp: linear-gradient(
+    to right,
+    $accent-color-darker,
+    $primary-color,
+  );
+  
+
 header {
   @include flex-center(
     $flex-direction: row,
@@ -7,7 +14,7 @@ header {
     $justify-content: space-between
   );
   height: 4.5rem;
-  background-color: $support-color;
+  background-image: $gradient-color-temp;
   font-family: $font-medium;
   letter-spacing: 0.1rem;
   position: sticky;
