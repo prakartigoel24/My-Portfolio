@@ -1,9 +1,6 @@
 @import "./base.scss";
 
 .section_about_me {
-  background-image: url("https://media.giphy.com/media/l1Et7Qw1XjvunS0Io/giphy.gif?cid=ecf05e47w0thiqfnondypezexg971wvh0hz9fl6djzt5sn6s&ep=v1_gifs_search&rid=giphy.gif&ct=g");
-  background-blend-mode: darken;
-  background-attachment: fixed;
 
   & .container {
     @include flex-center(column);
