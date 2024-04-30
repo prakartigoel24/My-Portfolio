@@ -7,11 +7,16 @@
     @include flex-center(column);
   }
 
+
   .project_filter {
     background-color: $support-color;
     @include flex-center($justify-content: space-between);
     padding: $padding-small;
     margin-bottom: $margin-large;
+
+    & h4{
+      margin-right: $margin-large;
+    }
 
     #project_filter_options {
       color: $accent-color-lighter;
@@ -91,6 +96,10 @@
 @media screen and (min-width: $breakpoint-sm) {
 
   .section_portfolio {
+    
+    & .projects{
+      @include flex-center(column);
+    }
 
     & .portfolio_item{
       max-width: 85%;
@@ -121,8 +130,8 @@
 @media screen and (min-width: $breakpoint-xl) {
 
   .section_portfolio {
-
-    & .container{
+    
+    & .projects{
       @include flex-center;
       flex-wrap: wrap;
       gap: 2rem;
