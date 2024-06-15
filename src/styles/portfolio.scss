@@ -106,22 +106,51 @@
     }
   }
 }
+@media screen and (min-width: $breakpoint-md) {
+
+  .section_portfolio {
+    
+    & .projects{
+      @include flex-center(column);
+    }
+
+    & .portfolio_item{
+      max-width: 75%;
+    }
+  }
+}
 
 @media screen and (min-width: $breakpoint-lg) {
 
   .section_portfolio {
 
-    & .portfolio_item{
+    & .projects{
       @include flex-center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    
+    & .portfolio_item{
+      @include flex-center(column);
+      max-width: 45%;
+      height: 46rem;
 
       & .project_cover_image{
         align-self: self-start;
       }
+
       &_content{
-        max-width: 60%;
-        text-align: left;
+        max-width: 90%;
+        text-align: center;
+        flex: 1;
+        overflow-y:auto;
+      }
+
+      &_description{
+        flex: 1;
+        overflow-y: auto;
       }
     }
+  }
   }
 
 }
@@ -132,25 +161,30 @@
   .section_portfolio {
     
     & .projects{
-      @include flex-center;
+      @include flex-center(column, $justify-content:start, $align-items:center);
       flex-wrap: wrap;
       gap: 2rem;
 
       & .portfolio_item{
-        @include flex-center(column);
-        max-width: 45%;
-        height: 46rem;
-        
-        &_content{
-          max-width: 90%;
-          text-align: center;
-          flex: 1;
-          overflow-y:auto;
+        @include flex-center;
+        min-width: 85%;
+        height: fit-content;
+        padding: $padding-large;
+        column-gap: 2rem;
+
+        & .project_cover_image{
+          align-self: self-start;
+          max-width: 30%;
         }
 
+        &_content {
+          @include flex-center(column,$align-items:start);    
+          gap: 1.5rem;      
+        }
+        
         &_description{
-          flex: 1;
-          overflow-y: auto;
+         text-align: justify;
+         overflow-y: hidden;
         }
       }
     }
