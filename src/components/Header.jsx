@@ -25,6 +25,7 @@ const Header = () => {
           <GiHamburgerMenu/>
         )}
       </button>
+      <Link to="/contact" className="btn_accent connect_btn">Connect with me</Link>
     </header>
   );
 };

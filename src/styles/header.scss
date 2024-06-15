@@ -53,8 +53,6 @@ header {
     animation: slide-down 1s ease 0s 1 forwards;
   }
 
-}
-
 .menu-btn {
   background-color: transparent;
   border: none;
@@ -67,5 +65,60 @@ header {
   &:hover {
     color: lighten($color: $accent-color-darker, $amount: 10);
     transform: scale(1.1);
+  }
+}
+
+.connect_btn{
+  display: none;
+  min-width: fit-content;
+}
+}
+
+@media screen and (min-width: $breakpoint-md) {
+
+  header{
+    @include flex-center($justify-content:space-between, $align-items:center);
+
+    & .navbar {
+      @include flex-center($justify-content:end);
+      position: relative;
+      top: 0;
+      background: transparent;
+      padding-inline: $padding-medium;
+      width: fit-content;
+    }
+
+    & .menu-btn{
+      display: none;
+    }
+  
+  }
+
+}
+
+
+@media screen and (min-width: $breakpoint-xl) {
+
+  header{
+    @include flex-center($justify-content:space-between, $align-items:center);
+
+    & .navbar {
+      @include flex-center($justify-content:end);
+      position: relative;
+      top: 0;
+      background: transparent;
+      padding-inline: $padding-medium;
+      width: 100%;
+      gap: 5rem;
+    }
+
+    & .menu-btn{
+      display: none;
+    }
+
+    & .connect_btn{
+      display: flex;
+      margin-left: 4rem;
+    }
   }
 }
