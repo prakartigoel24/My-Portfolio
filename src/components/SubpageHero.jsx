@@ -5,14 +5,16 @@ import { Link } from 'react-router-dom';
 const SubpageHero = ({
 heading,
 subheading,
-backgroundImg,
 btnText,
 btnLink,
 }) => {
+
+  const spans = Array(30).fill(<span />);
+
   return (
-    <section className={`section section_subpage_hero ${backgroundImg}`}>
+    <section className={`section_subpage_hero`}>
+      {spans}
       <div className="hero_1">
-        {/* <p>Hello, I am</p> */}
         <h1>{heading}</h1>
       </div>
       <div className="hero_2">
