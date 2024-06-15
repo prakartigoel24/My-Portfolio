@@ -42,6 +42,7 @@ const PortfolioSection = ({ isSubsection }) => {
             })}
           </select>
         </div>}
+        <div className="projects">
         {newprojects.map((project, i) => {
           return (
             <PortfolioItem
@@ -54,6 +55,7 @@ const PortfolioSection = ({ isSubsection }) => {
             />
           );
         })}
+        </div>
         {isSubsection && <Link to="/portfolio" className="btn_accent">See complete portfolio</Link>}
       </div>
     </section>

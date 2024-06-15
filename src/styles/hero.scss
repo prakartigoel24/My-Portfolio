@@ -9,19 +9,28 @@
             color: $accent-color-lighter;
             letter-spacing: .2rem;
         }
+        grid-area: lefty-1;
     }
 
     .hero_2{
+        
+        @include flex-center(column);
         padding: $padding-large $padding-medium;
         margin: $margin-large 0;
         height:100%;
-        width: 80%;
+        width: 75%;
         background-image: linear-gradient(to top, $accent-color-darker, $secondary-color-darker);
         border-radius: 78% 22% 81% 19% / 38% 68% 32% 62% ;
+        grid-area: righty;
+
+        & img{
+            object-fit: contain;
+        }
     }
 
     .hero_3{
         text-align: center;
+        grid-area: lefty-2;
 
         p{
             margin: $margin-medium 0;
@@ -30,5 +39,53 @@
         span{
             color: $secondary-color-darker;
         }
+    }
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+    .section_hero{
+        & .hero_2{
+            max-width: 65%;
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+    .section_hero{
+        
+        display: grid;
+        grid: 
+        'lefty-1 lefty-1 lefty-1 righty'
+        'lefty-2 lefty-2 lefty-2 righty';
+
+        & .hero_1{
+            align-self: self-end;
+        }
+
+        & .hero_2{
+            max-width: 80%;
+            justify-self: center;
+            margin: 0;
+        }
+
+        & .hero_3{
+           align-self: center;
+           margin-left: $margin-large;
+        }
+
+    }
+}
+
+
+@media screen and (min-width: $breakpoint-xl) {
+    .section_hero{
+        & .hero_2{
+            max-width: 60%;
+        }
+
+        & .hero_1, .hero_3{
+            margin-left: $margin-large*3.5;
+        }
+
     }
 }

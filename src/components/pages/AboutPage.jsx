@@ -12,7 +12,6 @@ const AboutPage = () => {
         <SubpageHero
           heading={"About Me"}
           subheading={"Get to know more about me."}
-          backgroundImg={"bg-prism-spiral"}
           btnText={"Portfolio"}
           btnLink={"/portfolio"}
         />

@@ -44,16 +44,10 @@ $padding-large: calc($base-spacing * 2);
 /* Define your breakpoints as variables */
 $breakpoint-xs: 340px; // Extra small screens (phones)
 $breakpoint-sm: 576px; // Small screens (tablets)
-$breakpoint-md: 768px; // Medium screens (tablets)
-$breakpoint-lg: 992px;  // Large screens (laptops)
+$breakpoint-md: 706px; // Medium screens (tablets)
+$breakpoint-lg: 960px;  // Large screens (laptops)
 $breakpoint-xl: 1200px; // Extra large screens (desktops)
 
-
-/* Subpage Hero section background SVGs */
-
-$bg-prism-spiral: url('/public/images/bg-prism-spiral.svg');
-$bg-triangle: url('/public/images/bg-triangle.svg');
-$bg-spiral: url('/public/images/bg-spiral.svg');
 
 /* ------------------------- MIXINS ------------------------- */
 
@@ -131,18 +125,6 @@ $bg-spiral: url('/public/images/bg-spiral.svg');
 
 
 /* -------------------------UTILITY CLASSES ------------------------- */
-
-.heading_1{
-    font-size: $font-size-extralarge;
-}
-
-.heading_2{
-    font-size: $font-size-large;
-}
-
-.heading_3{
-    font-size: $font-size-medium;
-}
 
 .btn{
     margin: $margin-medium;

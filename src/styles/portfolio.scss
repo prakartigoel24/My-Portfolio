@@ -1,19 +1,24 @@
 @import "./base.scss";
 
 .section_portfolio {
+  @include flex-center(column);
 
-   & .container{
+  & .container {
     @include flex-center(column);
   }
 
 
-  .project_filter{
+  .project_filter {
     background-color: $support-color;
     @include flex-center($justify-content: space-between);
     padding: $padding-small;
     margin-bottom: $margin-large;
 
-    #project_filter_options{
+    & h4{
+      margin-right: $margin-large;
+    }
+
+    #project_filter_options {
       color: $accent-color-lighter;
       border: none;
       background-color: $support-color;
@@ -31,19 +36,19 @@
     margin-bottom: $margin-large;
     padding: $padding-medium;
     transition: all 0.4s ease;
-    
-    .project_cover_image{
-       border-radius: 2rem;
-       object-fit: cover;
-       overflow: hidden;
-       max-width: 22rem;
+
+    .project_cover_image {
+      border-radius: 2rem;
+      object-fit: cover;
+      overflow: hidden;
+      max-width: fit-content;
     }
 
-    &:hover{
-        transform: scale(1.05);
-        box-shadow: 0px 0px 8px 8px $accent-color-darker;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 8px 8px $accent-color-darker;
     }
-    
+
     &_content {
       display: flex;
       flex-direction: column;
@@ -55,7 +60,7 @@
     }
 
     &_tech {
-      @include flex-center(row, $justify-content:start);
+      @include flex-center(row, $justify-content: start);
       flex-wrap: wrap;
       gap: 1rem;
 
@@ -64,26 +69,124 @@
         padding: 0.5rem 1rem;
         border-radius: 3rem;
 
-        &:hover{
-            transform: scale(1.1);
-            cursor: default;
+        &:hover {
+          transform: scale(1.1);
+          cursor: default;
         }
       }
     }
 
     &_links {
-        @include flex-center(row, $justify-content:start);
-        flex-wrap: wrap;
-        gap: 1rem;
+      @include flex-center(row, $justify-content: start);
+      flex-wrap: wrap;
+      gap: 1rem;
 
-        > a {
-            border: 3px solid $accent-color-darker;
-            border-radius: 100%;
+      > a {
+        border: 3px solid $accent-color-darker;
+        border-radius: 100%;
 
-            &:hover{
-                border-color: $accent-color-lighter;
-            }
+        &:hover {
+          border-color: $accent-color-lighter;
         }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+
+  .section_portfolio {
+    
+    & .projects{
+      @include flex-center(column);
+    }
+
+    & .portfolio_item{
+      max-width: 85%;
+    }
+  }
+}
+@media screen and (min-width: $breakpoint-md) {
+
+  .section_portfolio {
+    
+    & .projects{
+      @include flex-center(column);
+    }
+
+    & .portfolio_item{
+      max-width: 75%;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+
+  .section_portfolio {
+
+    & .projects{
+      @include flex-center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    
+    & .portfolio_item{
+      @include flex-center(column);
+      max-width: 45%;
+      height: 46rem;
+
+      & .project_cover_image{
+        align-self: self-start;
+      }
+
+      &_content{
+        max-width: 90%;
+        text-align: center;
+        flex: 1;
+        overflow-y:auto;
+      }
+
+      &_description{
+        flex: 1;
+        overflow-y: auto;
+      }
+    }
+  }
+  }
+
+}
+
+
+@media screen and (min-width: $breakpoint-xl) {
+
+  .section_portfolio {
+    
+    & .projects{
+      @include flex-center(column, $justify-content:start, $align-items:center);
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      & .portfolio_item{
+        @include flex-center;
+        min-width: 85%;
+        height: fit-content;
+        padding: $padding-large;
+        column-gap: 2rem;
+
+        & .project_cover_image{
+          align-self: self-start;
+          max-width: 30%;
+        }
+
+        &_content {
+          @include flex-center(column,$align-items:start);    
+          gap: 1.5rem;      
+        }
+        
+        &_description{
+         text-align: justify;
+         overflow-y: hidden;
+        }
+      }
     }
 
   }
